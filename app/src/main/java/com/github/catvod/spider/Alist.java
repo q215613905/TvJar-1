@@ -36,7 +36,7 @@ public class Alist extends Spider {
                         String versionUrl = url + "/api/public/settings";
                         String json = OkHttpUtil.string(versionUrl, null);
                         String data = new JSONObject(json).optString("data");
-                        if (data.startsWith("{") && new JSONObject(data).getString("version").startsWith("v3.0")) ver = "3";
+                        if (data.startsWith("{") && new JSONObject(data).getString("version").startsWith("v3.")) ver = "3";
                         version.put(name, ver);
                     }
                 }catch (JSONException v){
